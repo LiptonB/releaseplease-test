@@ -3,3 +3,4 @@
 This is a breaking change
 This is just a feature
 And a little fix
+Bugfix
