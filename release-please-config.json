@@ -3,7 +3,11 @@
   "release-type": "simple",
   "include-component-in-tag": true,
   "packages": {
-    "actions/action1": {},
-    "actions/action2": {}
+    "actions/action1": {
+      "package-name": "action1"
+    },
+    "actions/action2": {
+      "package-name": "action2"
+    }
   }
 }
