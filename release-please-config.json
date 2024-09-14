@@ -8,6 +8,9 @@
     },
     "actions/action2": {
       "package-name": "action2"
+    },
+    "actions/action3": {
+      "package-name": "action3"
     }
   }
 }
