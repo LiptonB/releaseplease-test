@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/LiptonB/releaseplease-test/compare/v2.0.0...v2.1.0) (2024-09-14)
+
+
+### Features
+
+* do something ([389ac32](https://github.com/LiptonB/releaseplease-test/commit/389ac323a2d5c6d243409e0f523d3cb7d3dbff49))
+
 ## [2.0.0](https://github.com/LiptonB/releaseplease-test/compare/v1.0.0...v2.0.0) (2024-09-14)
 
 
