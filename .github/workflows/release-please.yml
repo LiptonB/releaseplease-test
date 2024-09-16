@@ -24,3 +24,50 @@ jobs:
           # optional. customize path to .release-please-manifest.json
           manifest-file: .release-please-manifest.json
           include-component-in-tag: true
+
+  image-build:
+    runs-on: ubuntu-latest
+    if: ${{ needs.release-please.outputs.release_created == 'true' }}
+    env:
+      REGISTRY: us-central1-docker.pkg.dev/bl-experiments/main
+    strategy:
+      matrix:
+        path: ${{ needs.release-please.outputs.paths_released }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check if Dockerfile is present
+        id: dockerfile-present
+        run: |
+          if [[ -f "${{ matrix.path }}/Dockerfile" ]]; then
+            echo "::set-output name=dockerfile::true"
+          else
+            echo "::set-output name=dockerfile::false"
+          fi
+
+      - name: Log in to the Container registry
+        if: ${{ steps.dockerfile-present.outputs.dockerfile == 'true' }}
+        uses: docker/login-action@v3
+        with:
+          registry: us-central1-docker.pkg.dev
+          username: _json_key
+          password: ${{ secrets.GOOGLE_SA_KEY }}
+
+      - name: Compute image name and tags
+        id: meta
+        if: ${{ steps.dockerfile-present.outputs.dockerfile == 'true' }}
+        run: |
+          package_name=$(jq -r --arg path "${{ matrix.path }}" '.packages[$path]."package_name"' release-please-config.json)
+          version=$(jq -r --arg path "${{ matrix.path }}" '.[$path]' .release-please-manifest.json)
+          echo "tags<<EOF" >> $GITHUB_OUTPUT
+          echo us-central1-docker.pkg.dev/bl-experiments/main/$package_name:$version >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Build and push Docker image
+        if: ${{ steps.dockerfile-present.outputs.dockerfile == 'true' }}
+        uses: docker/build-push-action@v6
+        with:
+          context: ${{ matrix.path }}
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
