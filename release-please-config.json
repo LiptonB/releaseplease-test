@@ -11,6 +11,9 @@
     },
     "actions/action3": {
       "package-name": "action3"
+    },
+    "images/image1": {
+      "package-name": "image1"
     }
   }
 }
