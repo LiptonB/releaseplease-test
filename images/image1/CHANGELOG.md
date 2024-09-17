@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/LiptonB/releaseplease-test/compare/image1-v1.3.1...image1-v1.3.2) (2024-09-17)
+
+
+### Bug Fixes
+
+* remove all notes ([c5993fd](https://github.com/LiptonB/releaseplease-test/commit/c5993fdbcc30bfa32188de8046e6627bb9f6514c))
+
 ## [1.3.1](https://github.com/LiptonB/releaseplease-test/compare/image1-v1.3.0...image1-v1.3.1) (2024-09-17)
 
 
