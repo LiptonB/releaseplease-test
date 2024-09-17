@@ -38,7 +38,7 @@ jobs:
       REGISTRY: us-central1-docker.pkg.dev/bl-experiments/main
     strategy:
       matrix:
-        path: ${{ needs.release-please.outputs.paths_released }}
+        path: ${{ fromJSON(needs.release-please.outputs.paths_released) }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
