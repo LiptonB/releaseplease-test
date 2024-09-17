@@ -47,9 +47,9 @@ jobs:
         id: dockerfile-present
         run: |
           if [[ -f "${{ matrix.path }}/Dockerfile" ]]; then
-            echo "::set-output name=dockerfile::true"
+            echo "dockerfile=true" >> $GITHUB_OUTPUT
           else
-            echo "::set-output name=dockerfile::false"
+            echo "dockerfile=false" >> $GITHUB_OUTPUT
           fi
 
       - name: Log in to the Container registry
