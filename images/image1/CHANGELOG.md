@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/LiptonB/releaseplease-test/compare/image1-v1.1.0...image1-v1.2.0) (2024-09-17)
+
+
+### Features
+
+* something or other ([f0f8cc9](https://github.com/LiptonB/releaseplease-test/commit/f0f8cc94b1b74ab3a8cceefa8c09e62bbc3ede0f))
+
 ## [1.1.0](https://github.com/LiptonB/releaseplease-test/compare/image1-v1.0.2...image1-v1.1.0) (2024-09-17)
 
 
