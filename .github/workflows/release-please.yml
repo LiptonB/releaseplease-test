@@ -64,7 +64,7 @@ jobs:
         id: meta
         if: ${{ steps.dockerfile-present.outputs.dockerfile == 'true' }}
         run: |
-          package_name=$(jq -r --arg path "${{ matrix.path }}" '.packages[$path]."package_name"' release-please-config.json)
+          package_name=$(jq -r --arg path "${{ matrix.path }}" '.packages[$path]."package-name"' release-please-config.json)
           version=$(jq -r --arg path "${{ matrix.path }}" '.[$path]' .release-please-manifest.json)
           echo "tags<<EOF" >> $GITHUB_OUTPUT
           echo us-central1-docker.pkg.dev/bl-experiments/main/$package_name:$version >> $GITHUB_OUTPUT
