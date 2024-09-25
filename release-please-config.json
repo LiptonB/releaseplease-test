@@ -1,6 +1,7 @@
 {
   "bootstrap-sha": "fd5f0bf2143ad19351bd5406159465f01183bcd6",
   "release-type": "simple",
+  "separate-pull-requests": true,
   "packages": {
     "actions/action1": {
       "package-name": "action1"
