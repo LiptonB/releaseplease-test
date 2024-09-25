@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.1.0](https://github.com/LiptonB/releaseplease-test/compare/action1-v2.0.1...action1-v2.1.0) (2024-09-25)
+
+
+### Features
+
+* new text ([d67dffa](https://github.com/LiptonB/releaseplease-test/commit/d67dffa59f85ea3eb8b994edcafc19d75992cce2))
+
+
+### Bug Fixes
+
+* cleanup ([575bbde](https://github.com/LiptonB/releaseplease-test/commit/575bbde52d68ef4f283b3fa96dc1567124eb9795))
+
 ## [2.0.1](https://github.com/LiptonB/releaseplease-test/compare/action1-v2.0.0...action1-v2.0.1) (2024-09-14)
 
 
