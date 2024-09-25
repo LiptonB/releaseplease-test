@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/LiptonB/releaseplease-test/compare/action2-v1.2.0...action2-v1.3.0) (2024-09-25)
+
+
+### Features
+
+* new text ([d67dffa](https://github.com/LiptonB/releaseplease-test/commit/d67dffa59f85ea3eb8b994edcafc19d75992cce2))
+
 ## [1.2.0](https://github.com/LiptonB/releaseplease-test/compare/action2-v1.1.1...action2-v1.2.0) (2024-09-14)
 
 
