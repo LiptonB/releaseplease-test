@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/LiptonB/releaseplease-test/compare/action3-v1.0.1...action3-v1.0.2) (2024-09-25)
+
+
+### Bug Fixes
+
+* another cleanup ([bd16b50](https://github.com/LiptonB/releaseplease-test/commit/bd16b505336b0084fa550279c7d3cae88aebb5f3))
+
 ## [1.0.1](https://github.com/LiptonB/releaseplease-test/compare/action3-v1.0.0...action3-v1.0.1) (2024-09-14)
 
 
